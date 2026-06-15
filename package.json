@@ -1,0 +1,20 @@
+{
+  "name": "@talos/trending",
+  "version": "0.1.0",
+  "description": "Monorepo for trending - time series data visualization packages",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm -w packages/core run build && npm -w packages/react run build",
+    "dev": "npm -w packages/core run dev & npm -w packages/react run dev",
+    "typecheck": "npm -w packages/core run typecheck && npm -w packages/react run typecheck",
+    "clean": "rm -rf packages/*/dist node_modules"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/talos-sa/trending.git"
+  }
+}
