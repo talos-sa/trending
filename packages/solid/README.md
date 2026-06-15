@@ -1,32 +1,32 @@
-# @talos-sa/trending-react
+# @talos-sa/trending-solid
 
-React components for time series data visualization. SVG-based charts, interactive legends, time range controls, cursor inspection, and export.
+Solid components for time series data visualization. SVG-based charts, interactive legends, time range controls, cursor inspection, and export.
 
 ## Installation
 
 ```bash
-npm install @talos-sa/trending-react
+npm install @talos-sa/trending-solid
 ```
 
-Requires `react` and `react-dom` as peer dependencies.
+Requires `solid-js` as a peer dependency.
 
 ## Usage
 
 ```tsx
-import { useState } from 'react';
-import { TrendChart, TrendLegend, TrendTimeRange, TrendExport } from '@talos-sa/trending-react';
+import { createSignal } from 'solid-js';
+import { TrendChart, TrendLegend, TrendTimeRange, TrendExport } from '@talos-sa/trending-solid';
 
 function Dashboard() {
-  const [series, setSeries] = useState([
+  const [series, setSeries] = createSignal([
     { id: 1, name: 'Temperature', color: '#ef4444', unit: '°C', visible: true },
     { id: 2, name: 'Pressure', color: '#3b82f6', unit: 'kPa', visible: true },
   ]);
 
   return (
     <div>
-      <TrendLegend series={series} onToggleSeries={id => setSeries(...)} />
-      <TrendTimeRange range="1h" onRangeChange={setRange} />
-      <TrendChart data={points} width={800} height={250} color="#3b82f6" />
+      <TrendLegend series={series()} onToggleSeries={id => {}} />
+      <TrendTimeRange range="1h" onRangeChange={r => {}} />
+      <TrendChart data={[]} width={800} height={250} color="#3b82f6" />
       <TrendExport onExport={format => console.log(format)} />
     </div>
   );
@@ -49,7 +49,7 @@ The components use Tailwind CSS utility classes. Since this package ships pre-co
 
 ```css
 @import "tailwindcss";
-@source "../node_modules/@talos-sa/trending-react";
+@source "../node_modules/@talos-sa/trending-solid";
 ```
 
 ### Tailwind CSS v3
@@ -58,7 +58,7 @@ The components use Tailwind CSS utility classes. Since this package ships pre-co
 module.exports = {
   content: [
     "./src/**/*.{ts,tsx}",
-    "./node_modules/@talos-sa/trending-react/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@talos-sa/trending-solid/**/*.{js,ts,jsx,tsx}",
   ],
 }
 ```

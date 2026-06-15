@@ -197,7 +197,35 @@ Dropdown export button supporting CSV, JSON, and PNG formats.
 
 ### Styling
 
-All components use Tailwind CSS utility classes. Your project must have Tailwind CSS configured for the default styling to apply. The components expect a dark background (`bg-gray-950` or similar) to match their color scheme.
+All components use Tailwind CSS utility classes. Since these packages ship pre-compiled JavaScript (not raw TSX), your Tailwind build process needs to be told where to scan for class names.
+
+#### Tailwind CSS v4
+
+In your CSS entry file, add an `@source` directive pointing to the package:
+
+```css
+@import "tailwindcss";
+@source "../node_modules/@talos-sa/trending-react";
+```
+
+Replace `@talos-sa/trending-react` with whichever framework package you're using.
+
+The source files (`src/`) are included in the published package, so Tailwind's scanner can find the class names.
+
+#### Tailwind CSS v3
+
+Add the package to the `content` array in `tailwind.config.js`:
+
+```js
+module.exports = {
+  content: [
+    "./src/**/*.{ts,tsx}",
+    "./node_modules/@talos-sa/trending-react/**/*.{js,ts,jsx,tsx}",
+  ],
+}
+```
+
+The components expect a dark background (`bg-gray-950` or similar) to match their color scheme.
 
 ---
 
