@@ -1,5 +1,5 @@
 {
-  "name": "@talos/trending-react",
+  "name": "@talos-sa/trending-react",
   "version": "0.1.0",
   "description": "React components for time series data visualization - charts, legends, cursors, and export",
   "type": "module",
@@ -24,13 +24,13 @@
     "src"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --clean --external react --external react-dom --external @talos/trending-core",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch --external react --external react-dom --external @talos/trending-core",
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --external react --external react-dom --external @talos-sa/trending-core",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch --external react --external react-dom --external @talos-sa/trending-core",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@talos/trending-core": "^0.1.0"
+    "@talos-sa/trending-core": "^0.1.0"
   },
   "peerDependencies": {
     "react": "^19.0.0",

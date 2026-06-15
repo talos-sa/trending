@@ -1,5 +1,5 @@
 {
-  "name": "@talos/trending-core",
+  "name": "@talos-sa/trending-core",
   "version": "0.1.0",
   "description": "Core trending engine and types for time series data processing",
   "type": "module",

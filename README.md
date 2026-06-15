@@ -1,4 +1,4 @@
-# @talos/trending
+# @talos-sa/trending
 
 Monorepo for time series data visualization — a framework-agnostic core engine + framework-specific UI packages.
 
@@ -6,23 +6,23 @@ Monorepo for time series data visualization — a framework-agnostic core engine
 
 | Package | Description |
 |---------|-------------|
-| `@talos/trending-core` | Pure TypeScript engine, types, and web worker. Works in any JS environment (Node, browser, any framework). |
-| `@talos/trending-react` | React components built on top of `@talos/trending-core`. SVG-based charts, legends, cursors, and export. |
+| `@talos-sa/trending-core` | Pure TypeScript engine, types, and web worker. Works in any JS environment (Node, browser, any framework). |
+| `@talos-sa/trending-react` | React components built on top of `@talos-sa/trending-core`. SVG-based charts, legends, cursors, and export. |
 
 ---
 
-## @talos/trending-core
+## @talos-sa/trending-core
 
 ### Installation
 
 ```bash
-npm install @talos/trending-core
+npm install @talos-sa/trending-core
 ```
 
 ### Engine
 
 ```ts
-import { TrendingEngine } from '@talos/trending-core';
+import { TrendingEngine } from '@talos-sa/trending-core';
 
 const engine = new TrendingEngine(3600); // max 3600 points per series
 
@@ -75,12 +75,12 @@ A self-contained Web Worker for offloading downsampling and analysis is availabl
 
 ---
 
-## @talos/trending-react
+## @talos-sa/trending-react
 
 ### Installation
 
 ```bash
-npm install @talos/trending-react
+npm install @talos-sa/trending-react
 ```
 
 Requires `react` and `react-dom` as peer dependencies.
@@ -89,7 +89,7 @@ Requires `react` and `react-dom` as peer dependencies.
 
 ```tsx
 import { useState } from 'react';
-import { TrendChart, TrendLegend, TrendTimeRange, TrendExport } from '@talos/trending-react';
+import { TrendChart, TrendLegend, TrendTimeRange, TrendExport } from '@talos-sa/trending-react';
 
 function TrendingDashboard() {
   const [series, setSeries] = useState([

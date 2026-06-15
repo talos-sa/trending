@@ -8,7 +8,7 @@ export { TrendExport } from './components/TrendExport';
 export { Button } from './components/ui/Button';
 export { Input } from './components/ui/Input';
 
-export { TrendingEngine } from '@talos/trending-core';
+export { TrendingEngine } from '@talos-sa/trending-core';
 
-export type { DataPoint, TimeSeries, TrendViewport } from '@talos/trending-core';
-export type { DataQuality } from '@talos/trending-core';
+export type { DataPoint, TimeSeries, TrendViewport } from '@talos-sa/trending-core';
+export type { DataQuality } from '@talos-sa/trending-core';
