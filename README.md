@@ -6,8 +6,11 @@ Monorepo for time series data visualization — a framework-agnostic core engine
 
 | Package | Description |
 |---------|-------------|
-| `@talos-sa/trending-core` | Pure TypeScript engine, types, and web worker. Works in any JS environment (Node, browser, any framework). |
-| `@talos-sa/trending-react` | React components built on top of `@talos-sa/trending-core`. SVG-based charts, legends, cursors, and export. |
+| `@talos-sa/trending-core` | Pure TypeScript engine, types, and web worker. Works in any JS environment. |
+| `@talos-sa/trending-react` | React components. |
+| `@talos-sa/trending-vue` | Vue 3 components. |
+| `@talos-sa/trending-svelte` | Svelte 5 components. |
+| `@talos-sa/trending-solid` | Solid components. |
 
 ---
 

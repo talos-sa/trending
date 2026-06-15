@@ -7,9 +7,9 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm -w packages/core run build && npm -w packages/react run build",
-    "dev": "npm -w packages/core run dev & npm -w packages/react run dev",
-    "typecheck": "npm -w packages/core run typecheck && npm -w packages/react run typecheck",
+    "build": "npm -w packages/core run build && npm -w packages/react run build && npm -w packages/vue run build && npm -w packages/svelte run build && npm -w packages/solid run build",
+    "dev": "npm -w packages/core run dev & npm -w packages/react run dev & npm -w packages/vue run dev & npm -w packages/svelte run dev & npm -w packages/solid run dev",
+    "typecheck": "npm -w packages/core run typecheck && npm -w packages/react run typecheck && npm -w packages/solid run typecheck",
     "clean": "rm -rf packages/*/dist node_modules"
   },
   "license": "MIT",
