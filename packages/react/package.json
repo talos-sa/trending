@@ -1,6 +1,6 @@
 {
   "name": "@talos-sa/trending-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React components for time series data visualization - charts, legends, cursors, and export",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -21,7 +21,8 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "README.md"
   ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --clean --external react --external react-dom --external @talos-sa/trending-core",

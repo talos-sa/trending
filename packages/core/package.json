@@ -1,6 +1,6 @@
 {
   "name": "@talos-sa/trending-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Core trending engine and types for time series data processing",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -20,7 +20,8 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "README.md"
   ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
